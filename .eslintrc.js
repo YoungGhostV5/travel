@@ -25,6 +25,7 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    "linebreak-style": [0,"error", "windows"],
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',
@@ -44,7 +45,15 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       optionalDependencies: ['test/unit/index.js']
     }],
+    // try to fix the line break problem
+    'linebreak-style': ["error", "windows"],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 统一换行符，"\n" unix(for LF) and "\r\n" for windows(CRLF)，默认unix
+    // off或0: 禁用规则
+    'linebreak-style': 'off',
+    'no-tabs': 'off',
+    // 禁止空格和 tab 的混合缩进
+    'no-mixed-spaces-and-tabs': 0
   }
 }
