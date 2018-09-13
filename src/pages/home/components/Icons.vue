@@ -1,6 +1,6 @@
 <template>
 	<div class="icons">
-		<swiper>
+		<swiper :options="swiperOption">
 			<swiper-slide v-for="(page, index) of pages" :key="index">
 				<div class="icon"  v-for="item of page" :key="item.id">
 					<div class="icon-img">
@@ -9,6 +9,7 @@
 					<p class="icon-desc">{{item.desc}}</p>
 				</div>
 			</swiper-slide>
+			<div class="swiper-pagination"  slot="pagination"></div>
 		</swiper>
 	</div>
 </template>
@@ -18,6 +19,9 @@ export default {
   name: 'HomeIcons',
   data() {
   	return {
+  		swiperOption: {
+  			pagination: '.swiper-pagination',
+  		},
   		iconList: [{
   			id: '0001',
   			imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -84,13 +88,15 @@ export default {
 	.icons >>> .swiper-container
 		height: 0
 		padding-bottom: 50%
+	.icons >>> .swiper-pagination-bullet-active
+		background: $bgColor
 	.icon
 		position: relative
 		overflow: hidden
 		float: left
 		width: 25%
 		height: 0
-		padding-bottom: 25%
+		padding-bottom: 22%
 		.icon-img
 			position: absolute
 			top: 0
@@ -113,5 +119,11 @@ export default {
 			text-align: center
 			color: $darkTextColor
 			mixins()
+	.swiper-pagination
+		position: absolute;
+		bottom: 6px;
+		padding: 0 6px;
+		width: 100%;
+		text-align: center;
 
 </style>
