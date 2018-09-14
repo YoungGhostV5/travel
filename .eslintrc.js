@@ -52,7 +52,10 @@ module.exports = {
     // 统一换行符，"\n" unix(for LF) and "\r\n" for windows(CRLF)，默认unix
     // off或0: 禁用规则
     'linebreak-style': 'off',
+    'no-console': 0,
     'no-tabs': 'off',
+    // 禁止给参数重新赋值
+    "no-param-reassign": 0,
     // 禁止空格和 tab 的混合缩进
     'no-mixed-spaces-and-tabs': 0,
     // 此规则具有字符串选项或对象选项：
