@@ -22,7 +22,7 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>',
+  template: '<App/>'
 });
 
 // 路由就是根据网址的不同，返回不同的内容给用户

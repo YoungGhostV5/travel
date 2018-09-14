@@ -54,6 +54,16 @@ module.exports = {
     'linebreak-style': 'off',
     'no-tabs': 'off',
     // 禁止空格和 tab 的混合缩进
-    'no-mixed-spaces-and-tabs': 0
+    'no-mixed-spaces-and-tabs': 0,
+    // 此规则具有字符串选项或对象选项：
+    "comma-dangle": ["error", "never"],
+    // or
+    "comma-dangle": ["error", {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore"
+    }]
   }
 }
