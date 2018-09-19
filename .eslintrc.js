@@ -67,6 +67,14 @@ module.exports = {
         "imports": "never",
         "exports": "never",
         "functions": "ignore"
-    }]
+    }],
+    // 字符串最大长度
+    'max-len': ["error", {"code": 300, "tabWidth": 3}],
+    // for in循环是否要用if语句过滤，0——不使用if
+    'guard-for-in': 0,
+    // 是否首选const，0——否
+    'prefer-const': 0,
+    // 禁用特定的语法
+    'no-restricted-syntax': 0
   }
 }
