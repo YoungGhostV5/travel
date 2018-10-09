@@ -8,16 +8,19 @@ Vue.use(Router);
 
 export default new Router({
   routes: [{
-  	path: '/',
-  	name: 'Home',
-  	component: Home
+    path: '/',
+    name: 'Home',
+    component: Home
   }, {
-  	path: '/city',
-  	name: 'City',
-  	component: City
+    path: '/city',
+    name: 'City',
+    component: City
   }, {
-  	path: '/detail/:id',
-  	name: 'Detail',
-  	component: Detail
-  }]
+    path: '/detail/:id',
+    name: 'Detail',
+    component: Detail
+  }],
+  scrollBehavior (to, from, savedPosition) {
+  return { x: 0, y: 0 }
+  }
 })
