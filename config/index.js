@@ -13,6 +13,10 @@ module.exports = {
     // 配置接口地址代理，解决跨域问题
     proxyTable: {
         '/api': {
+            // 请求后台数据
+            // target: 'http://localhost:80'
+
+            // 请求本地数据
             target: 'http://localhost:8080',
             pathRewrite: {
                 '^/api': '/static/mock'
